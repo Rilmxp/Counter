@@ -1,0 +1,28 @@
+@font-face {
+  font-family: "Archivo Narrow";
+  src: url("../fonts/ArchivoNarrow-Regular.otf") format("otf");
+  font-style: normal;
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Archivo Narrow";
+  src: url("../fonts/ArchivoNarrow-Bold.otf") format("otf");
+  font-style: normal;
+  font-weight: 700;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Archivo Narrow", sans-serif;
+  color: rgb(85, 25, 139);
+}
+
+.favicon {
+  border-radius: 10px;
+}

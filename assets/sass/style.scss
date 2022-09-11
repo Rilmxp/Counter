@@ -1,0 +1,165 @@
+@import "config";
+
+body {
+  background: linear-gradient(to left, #74ebd5, #acb6e5);
+  overflow: hidden;
+}
+
+.counter-alignment {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.links {
+  top: 2.2vh;
+  width: 80vw;
+  left: 10vw;
+  position: absolute;
+
+  display: flex;
+  justify-content: space-evenly;
+  // align-items: center;
+
+  i {
+    font-size: 1.75em;
+    &:hover {
+      color: white;
+    }
+  }
+  .fa-github {
+    // margin-left: 1.5vw;
+  }
+  .fa-briefcase {
+    // margin-right: 1.5vw;
+  }
+}
+
+.counter {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  width: 80vw;
+  row-gap: 20vh;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  border-radius: 25px;
+}
+
+h1 {
+  font-size: 2em;
+  color: rgb(85, 25, 139);
+}
+.display {
+  border: 2px rgb(85, 25, 139) solid;
+  border-radius: 25px;
+  width: 75%;
+  min-height: 40px;
+  font-weight: 700;
+  font-size: 1.5em;
+
+  text-align: center;
+  padding: 14px 0;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.buttons {
+  width: 75%;
+  display: flex;
+  justify-content: space-evenly;
+  // text-align: justify;
+  column-gap: 5px;
+
+  .plus,
+  .minus,
+  .reset {
+    display: flex;
+    flex: 1;
+    text-align: center;
+    min-height: 40px;
+    background-color: white;
+    border: 2px rgb(85, 25, 139) solid;
+    border-radius: 20px;
+    font-size: 1em;
+    box-shadow: 0 5px #999;
+    // user-select: none;
+    cursor: pointer;
+    &:hover {
+      background-color: #74ebd5;
+      color: white;
+      // border: 3px white solid;
+    }
+    &:active {
+      transform: translateY(2px);
+      box-shadow: 0 1px #666;
+    }
+  }
+
+  span {
+    margin: auto auto;
+    // color: white;
+  }
+}
+
+/* WORKS BUT NO GRADIENT ON BODY
+
+.counter {
+  ///////////////////////////////////
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  height: 80vh;
+
+  //////////////////////////////////
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+
+  border-radius: 25px;
+}
+
+h1 {
+  text-align: center;
+  margin-bottom: 33%;
+}
+
+.display {
+  border: solid black 3px;
+  text-align: center;
+  width: 65%;
+  margin: 0 auto;
+}
+
+.buttons {
+  display: flex;
+  width: 65%;
+  margin: 20px auto;
+
+  justify-content: space-between;
+  column-gap: 10px;
+
+  .plus,
+  .minus,
+  .reset {
+    flex-grow: 1;
+  }
+}
+*/
