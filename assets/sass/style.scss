@@ -9,26 +9,23 @@
 }
 
 .links {
-  top: 2.2vh;
+  top: 2.5vh;
+  height: 5vh;
   width: 80vw;
   left: 10vw;
   position: absolute;
 
   display: flex;
   justify-content: space-evenly;
-  // align-items: center;
+  align-items: center;
 
   i {
+    // width: 100%;
+    // height: auto;
     font-size: 1.75em;
     &:hover {
       color: white;
     }
-  }
-  .fa-github {
-    // margin-left: 1.5vw;
-  }
-  .fa-briefcase {
-    // margin-right: 1.5vw;
   }
 }
 
@@ -46,7 +43,7 @@
 }
 
 h1 {
-  font-size: 2em;
+  // font-size: 2em;
   color: rgb(85, 25, 139);
 }
 .display {
@@ -66,7 +63,6 @@ h1 {
   width: 75%;
   display: flex;
   justify-content: space-evenly;
-  // text-align: justify;
   column-gap: 5px;
 
   .plus,
@@ -81,12 +77,11 @@ h1 {
     border-radius: 20px;
     font-size: 1em;
     box-shadow: 0 5px #999;
-    // user-select: none;
+
     cursor: pointer;
     &:hover {
       background-color: #74ebd5;
       color: white;
-      // border: 3px white solid;
     }
     &:active {
       transform: translateY(2px);
@@ -96,6 +91,5 @@ h1 {
 
   span {
     margin: auto auto;
-    // color: white;
   }
 }

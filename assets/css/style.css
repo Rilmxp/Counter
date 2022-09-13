@@ -32,12 +32,14 @@ body {
 }
 
 .links {
-  top: 2.2vh;
+  top: 2.5vh;
+  height: 5vh;
   width: 80vw;
   left: 10vw;
   position: absolute;
   display: flex;
   justify-content: space-evenly;
+  align-items: center;
 }
 .links i {
   font-size: 1.75em;
@@ -45,6 +47,7 @@ body {
 .links i:hover {
   color: white;
 }
+
 .counter {
   background-color: white;
   display: flex;
@@ -59,7 +62,6 @@ body {
 }
 
 h1 {
-  font-size: 2em;
   color: rgb(85, 25, 139);
 }
 
