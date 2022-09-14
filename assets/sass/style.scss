@@ -20,8 +20,6 @@
   align-items: center;
 
   i {
-    // width: 100%;
-    // height: auto;
     font-size: 1.75em;
     &:hover {
       color: white;
@@ -42,40 +40,45 @@
   @include box-style;
 }
 
-h1 {
-  // font-size: 2em;
-  color: rgb(85, 25, 139);
-}
 .display {
   border: 2px rgb(85, 25, 139) solid;
   width: 75%;
   min-height: 40px;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.2em;
 
   text-align: center;
-  padding: 14px 0;
-
+  padding: 10px;
+  // overflow: hidden;
   @include box-style;
+
+  span {
+    display: block;
+    margin: 0px auto;
+    // max-width: 90%;
+    text-align: center;
+  }
 }
 
 .buttons {
+  // to assist positioning of messages.
+  position: relative;
+
   width: 75%;
   display: flex;
   justify-content: space-evenly;
-  column-gap: 5px;
+  flex-wrap: wrap;
 
-  .plus,
-  .minus,
-  .reset {
-    display: flex;
-    flex: 1;
+  button {
+    width: 45%;
     text-align: center;
     min-height: 40px;
     background-color: white;
     border: 2px rgb(85, 25, 139) solid;
     border-radius: 20px;
-    font-size: 1em;
+    font-size: 1.2em;
+    font-weight: 500;
+
     box-shadow: 0 5px #999;
 
     cursor: pointer;
@@ -92,4 +95,60 @@ h1 {
   span {
     margin: auto auto;
   }
+
+  .plus,
+  .minus {
+    margin-bottom: 10px;
+  }
 }
+
+.message {
+  position: absolute;
+  top: -35px;
+  text-align: center;
+  font-weight: 700;
+  color: red;
+  opacity: 0;
+
+  animation: msg-fade-in 2s ease-in-out;
+}
+
+///////////////////////////////////
+///////////////////////////////////
+
+// DO NOT CANCEL,
+// KEEP IT FOR RESPONSIVENESS "+" "reset" "-" on same line
+// .buttons {
+//   width: 75%;
+//   display: flex;
+//   justify-content: space-evenly;
+//   column-gap: 5px;
+
+//   .plus,
+//   .minus,
+//   .reset {
+//     display: flex;
+//     flex: 1;
+//     text-align: center;
+//     min-height: 40px;
+//     background-color: white;
+//     border: 2px rgb(85, 25, 139) solid;
+//     border-radius: 20px;
+//     font-size: 1em;
+//     box-shadow: 0 5px #999;
+
+//     cursor: pointer;
+//     &:hover {
+//       background-color: #74ebd5;
+//       color: white;
+//     }
+//     &:active {
+//       transform: translateY(2px);
+//       box-shadow: 0 1px #666;
+//     }
+//   }
+
+//   span {
+//     margin: auto auto;
+//   }
+// }

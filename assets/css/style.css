@@ -23,6 +23,14 @@ body {
   overflow: hidden;
 }
 
+@keyframes msg-fade-in {
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 .counter-alignment {
   height: 100vh;
   display: flex;
@@ -61,54 +69,64 @@ body {
   border-radius: 25px;
 }
 
-h1 {
-  color: rgb(85, 25, 139);
-}
-
 .display {
   border: 2px rgb(85, 25, 139) solid;
   width: 75%;
   min-height: 40px;
   font-weight: 700;
-  font-size: 1.5em;
+  font-size: 1.2em;
   text-align: center;
-  padding: 14px 0;
+  padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-radius: 25px;
 }
+.display span {
+  display: block;
+  margin: 0px auto;
+  text-align: center;
+}
 
 .buttons {
+  position: relative;
   width: 75%;
   display: flex;
   justify-content: space-evenly;
-  column-gap: 5px;
+  flex-wrap: wrap;
 }
-.buttons .plus,
-.buttons .minus,
-.buttons .reset {
-  display: flex;
-  flex: 1;
+.buttons button {
+  width: 45%;
   text-align: center;
   min-height: 40px;
   background-color: white;
   border: 2px rgb(85, 25, 139) solid;
   border-radius: 20px;
-  font-size: 1em;
+  font-size: 1.2em;
+  font-weight: 500;
   box-shadow: 0 5px #999;
   cursor: pointer;
 }
-.buttons .plus:hover,
-.buttons .minus:hover,
-.buttons .reset:hover {
+.buttons button:hover {
   background-color: #74ebd5;
   color: white;
 }
-.buttons .plus:active,
-.buttons .minus:active,
-.buttons .reset:active {
+.buttons button:active {
   transform: translateY(2px);
   box-shadow: 0 1px #666;
 }
 .buttons span {
   margin: auto auto;
+}
+.buttons .plus,
+.buttons .minus {
+  margin-bottom: 10px;
+}
+
+.message {
+  position: absolute;
+  top: -35px;
+  text-align: center;
+  font-weight: 700;
+  color: red;
+  opacity: 0;
+  animation: msg-fade-in 2s ease-in-out;
 }
