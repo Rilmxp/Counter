@@ -28,6 +28,7 @@ body {
     opacity: 1;
   }
   100% {
+    transform: translateY(-50%);
     opacity: 0;
   }
 }
@@ -77,13 +78,9 @@ body {
   font-size: 1.2em;
   text-align: center;
   padding: 10px;
+  overflow: hidden;
   box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
   border-radius: 25px;
-}
-.display span {
-  display: block;
-  margin: 0px auto;
-  text-align: center;
 }
 
 .buttons {
@@ -123,10 +120,10 @@ body {
 
 .message {
   position: absolute;
-  top: -35px;
+  top: -40px;
   text-align: center;
   font-weight: 700;
-  color: red;
+  color: #7209b7;
   opacity: 0;
   animation: msg-fade-in 2s ease-in-out;
 }

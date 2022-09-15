@@ -1,57 +1,86 @@
 "use strict";
 
 const counter = document.querySelector(".counter");
-const displayContainer = document.querySelector(".display");
-const displayValue = document.querySelector(".display span");
+const display = document.querySelector(".display");
 const buttons = document.querySelector(".buttons");
 
-let message = document.createElement("div");
+let errorMsg;
 
 // starting value of counter
-let Num = 999;
+let num = 0;
 
 counter.addEventListener("click", function (event) {
   updateCounter(event);
-  console.log("span", displayValue, displayValue.clientWidth);
-  console.log("display", displayContainer.clientWidth);
 });
 
 function updateCounter(event) {
-  message.remove();
+  if (!event.target.closest("BUTTON")) return;
+  if (errorMsg) errorMsg.remove();
 
   switch (event.target.closest("BUTTON").dataset.action) {
     case "+":
-      if (displayContainer.clientWidth - displayValue.clientWidth > 21) {
-        buttons.insertAdjacentElement("afterbegin", message);
-        message.innerHTML = "Maximun value reached";
-        message.classList.add("message");
-        return;
+      // check new num > than display size to stop counter
+      if (numBiggerThanDisplaySize()) {
+        return errorMsgDisplay("Maximum value reached");
       }
-      Num += 10000;
-      displayValue.style.color = "#29bf12";
+
+      num += 1;
+      display.style.color = "#29bf12";
       break;
+
     case "-":
-      if (Num === 0) {
-        buttons.insertAdjacentElement("afterbegin", message);
-        message.innerHTML = "Minimum value reached";
-        message.classList.add("message");
+      if (num === 0) {
+        errorMsgDisplay("Minimum value reached");
         return;
       }
-      Num -= 1;
-      displayValue.style.color = "red";
+      num -= 1;
+      display.style.color = "red";
       break;
+
     case "reset":
-      if (Num === 0) {
-        buttons.insertAdjacentElement("afterbegin", message);
-        message.innerHTML = "Counter already reset";
-        message.classList.add("message");
+      if (num === 0) {
+        errorMsgDisplay("Counter already reset");
         return;
       }
-      Num = 0;
-      displayValue.style.color = "red";
+
+      num = 0;
+      display.style.color = "red";
       break;
   }
 
-  displayValue.innerHTML = Num;
-  setTimeout(() => (displayValue.style.color = ""), "250");
+  display.innerHTML = num;
+  setTimeout(() => (display.style.color = ""), "250");
+
+  function errorMsgDisplay(msg) {
+    errorMsg = document.createElement("div");
+    buttons.insertAdjacentElement("afterbegin", errorMsg);
+    errorMsg.innerHTML = msg;
+    errorMsg.classList.add("message");
+  }
+
+  // measure number lenght in pixels to stop counter if > display container
+  function numBiggerThanDisplaySize() {
+    // create a span to measure size of new num
+    let ruler = document.createElement("span");
+    document.querySelector("body").insertAdjacentElement("afterbegin", ruler);
+
+    // set same font css prop to match display content
+    ruler.style.fontWeight = "700";
+    ruler.style.fontSize = "1.2em";
+    // ruler.style.display = "none";
+
+    ruler.innerHTML = num + 1;
+    let rulerWidth = ruler.getBoundingClientRect().width;
+    // ruler.style.display = "none";
+    ruler.remove();
+
+    // get padding of display container
+    let displayCssProp = window.getComputedStyle(display);
+    let displayPadding =
+      parseInt(displayCssProp.getPropertyValue("padding-left")) +
+      parseInt(displayCssProp.getPropertyValue("padding-right"));
+    // console.log("padding", displayPadding);
+
+    return rulerWidth > display.clientWidth - displayPadding;
+  }
 }

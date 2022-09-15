@@ -49,15 +49,8 @@
 
   text-align: center;
   padding: 10px;
-  // overflow: hidden;
+  overflow: hidden;
   @include box-style;
-
-  span {
-    display: block;
-    margin: 0px auto;
-    // max-width: 90%;
-    text-align: center;
-  }
 }
 
 .buttons {
@@ -104,10 +97,10 @@
 
 .message {
   position: absolute;
-  top: -35px;
+  top: -40px;
   text-align: center;
   font-weight: 700;
-  color: red;
+  color: #7209b7;
   opacity: 0;
 
   animation: msg-fade-in 2s ease-in-out;
