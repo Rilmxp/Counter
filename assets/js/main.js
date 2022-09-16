@@ -19,7 +19,7 @@ function updateCounter(event) {
 
   switch (event.target.closest("BUTTON").dataset.action) {
     case "+":
-      // check new num > than display size to stop counter
+      // check new num size > than display's to stop counter
       if (numBiggerThanDisplaySize()) {
         return errorMsgDisplay("Maximum value reached");
       }
@@ -31,7 +31,8 @@ function updateCounter(event) {
     case "-":
       if (num === 0) {
         errorMsgDisplay("Minimum value reached");
-        return;
+        display.style.color = "red";
+        break;
       }
       num -= 1;
       display.style.color = "red";
@@ -40,7 +41,6 @@ function updateCounter(event) {
     case "reset":
       if (num === 0) {
         errorMsgDisplay("Counter already reset");
-        return;
       }
 
       num = 0;
@@ -51,6 +51,9 @@ function updateCounter(event) {
   display.innerHTML = num;
   setTimeout(() => (display.style.color = ""), "250");
 
+  // FUNCTIONS //
+
+  // Display error Message
   function errorMsgDisplay(msg) {
     errorMsg = document.createElement("div");
     buttons.insertAdjacentElement("afterbegin", errorMsg);
@@ -58,28 +61,27 @@ function updateCounter(event) {
     errorMsg.classList.add("message");
   }
 
-  // measure number lenght in pixels to stop counter if > display container
+  // Measure num length in pixs to stop counter if > display size
   function numBiggerThanDisplaySize() {
     // create a span to measure size of new num
     let ruler = document.createElement("span");
     document.querySelector("body").insertAdjacentElement("afterbegin", ruler);
 
-    // set same font css prop to match display content
-    ruler.style.fontWeight = "700";
-    ruler.style.fontSize = "1.2em";
-    // ruler.style.display = "none";
-
-    ruler.innerHTML = num + 1;
-    let rulerWidth = ruler.getBoundingClientRect().width;
-    // ruler.style.display = "none";
-    ruler.remove();
-
-    // get padding of display container
+    // get some display's handy computed properties
     let displayCssProp = window.getComputedStyle(display);
+
+    //display's padding
     let displayPadding =
       parseInt(displayCssProp.getPropertyValue("padding-left")) +
       parseInt(displayCssProp.getPropertyValue("padding-right"));
-    // console.log("padding", displayPadding);
+
+    // set same font css prop to match display content
+    ruler.style.fontWeight = displayCssProp.getPropertyValue("font-weight");
+    ruler.style.fontSize = displayCssProp.getPropertyValue("font-size");
+
+    ruler.innerHTML = num + 1;
+    let rulerWidth = ruler.getBoundingClientRect().width;
+    ruler.remove();
 
     return rulerWidth > display.clientWidth - displayPadding;
   }

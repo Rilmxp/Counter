@@ -48,13 +48,13 @@
   font-size: 1.2em;
 
   text-align: center;
-  padding: 10px;
+  padding: 0.35em;
   overflow: hidden;
   @include box-style;
 }
 
 .buttons {
-  // to assist positioning of messages.
+  // to assist positioning of error msg.
   position: relative;
 
   width: 75%;
@@ -68,7 +68,7 @@
     min-height: 40px;
     background-color: white;
     border: 2px rgb(85, 25, 139) solid;
-    border-radius: 20px;
+    border-radius: 33px;
     font-size: 1.2em;
     font-weight: 500;
 
@@ -87,6 +87,7 @@
 
   span {
     margin: auto auto;
+    font-size: 1.3em;
   }
 
   .plus,
@@ -97,7 +98,7 @@
 
 .message {
   position: absolute;
-  top: -40px;
+  top: -50px;
   text-align: center;
   font-weight: 700;
   color: #7209b7;
@@ -106,42 +107,4 @@
   animation: msg-fade-in 2s ease-in-out;
 }
 
-///////////////////////////////////
-///////////////////////////////////
-
-// DO NOT CANCEL,
-// KEEP IT FOR RESPONSIVENESS "+" "reset" "-" on same line
-// .buttons {
-//   width: 75%;
-//   display: flex;
-//   justify-content: space-evenly;
-//   column-gap: 5px;
-
-//   .plus,
-//   .minus,
-//   .reset {
-//     display: flex;
-//     flex: 1;
-//     text-align: center;
-//     min-height: 40px;
-//     background-color: white;
-//     border: 2px rgb(85, 25, 139) solid;
-//     border-radius: 20px;
-//     font-size: 1em;
-//     box-shadow: 0 5px #999;
-
-//     cursor: pointer;
-//     &:hover {
-//       background-color: #74ebd5;
-//       color: white;
-//     }
-//     &:active {
-//       transform: translateY(2px);
-//       box-shadow: 0 1px #666;
-//     }
-//   }
-
-//   span {
-//     margin: auto auto;
-//   }
-// }
+@import "media-queries";

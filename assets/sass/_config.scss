@@ -33,11 +33,7 @@ body {
 }
 
 @keyframes msg-fade-in {
-  0% {
-    // transform: translateY(20%);
-  }
   50% {
-    // transform: translateY(-50%);
     opacity: 1;
   }
   100% {
