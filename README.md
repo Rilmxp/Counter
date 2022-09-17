@@ -37,7 +37,7 @@ The website consists of a single page with a central counter. The counter displa
   
  ## Responsiveness:
   - Only one breakpoint at 700px. It updates Buttons' layout and their order on the page as well as it upscales elements and font sizes.
-  - .counter has a set width of 1200px so it does not grow indefinitely on large screens.
+  - Counter has a set width of 1200px so it does not grow indefinitely on large screens.
 
 
 
