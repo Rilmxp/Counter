@@ -9,7 +9,7 @@ The website consists of a single page with a central counter. The counter displa
 ## Behaviour
 
 - Minimum value is 0. If you try to substract 1 to 0 a feedback message will pop up.
-- Maximum value is any number that fits on the display without overflowing it (see "javascript" on the section below). 
+- Maximum value is any number that fits on the display without overflowing it (see "javascript" notes on the next section). 
 - You cannot reset counter when at 0. A feedback message will pop up.
 
 ## Technologies / libraries / external resources
