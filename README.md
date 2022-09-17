@@ -4,7 +4,7 @@ A plain Javascript counter
 
 ## Description
 
-The website consists of a single page with a central counter. The counter displays a single number on the main display box as they are added or substracted by one by either pressing "+" or "-" buttons. Reset button sets value back to 0. 
+The website consists of a single page with a central counter. The counter displays a numbers on the main display box as they are added or substracted by one by either pressing "+" or "-" buttons. Reset button sets value back to 0. 
 
 ## Behaviour
 
