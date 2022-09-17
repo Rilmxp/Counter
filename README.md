@@ -30,7 +30,7 @@ The website consists of a single page with a central counter. The counter displa
   
   - CSS/SASS:
     - SASS partials are organized both by group of elements (_links, _counter-elements) or scope (_config, _media queries).
-    - CSS mgs-fade-in animation for feedback messages made with @keyframes
+    - CSS msg-fade-in animation for feedback messages made with @keyframes
   
   - Font-Awesome:
     - Github and Briefcase (<a> to Portfolio).
