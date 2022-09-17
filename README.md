@@ -1,6 +1,6 @@
 # Counter
 
-A plain Javascript counter
+A counter implemented with plain Javascript
 
 ## Description
 
