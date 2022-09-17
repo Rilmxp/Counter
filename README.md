@@ -24,8 +24,7 @@ The website consists of a single page with a central counter. The counter displa
       - errorMsgDisplay() triggers whenever the above behavioural conditions are not met.
       - numBiggerThanDisplaySize() triggers whenever user presses the "+" button. It makes the standard addition operation but instead of updating the counter's display, it creates a "ruler" to measure the resulting number in pixels. It then compares it with the content width of the display, and if it does not fit in this one, errorMsgDisplay() will trigger. Element sizes where taken using both elem.clientWidth and Elem.getBoundingRect() (this one on a <span> as clientWidht() cannot be used on such element)
       - a setTimeOut() function was also implemented to assist in color change of numbers (from green or red back to normal), whenever the display is updated.
-  
-    - "click" event on buttons is handled with Event Delegation. 
+      - "click" event on buttons is handled with Event Delegation. 
   
     - Additional notes on the above functions can be found directly on the code itself on main.js.
   
