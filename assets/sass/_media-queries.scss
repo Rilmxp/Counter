@@ -1,25 +1,26 @@
-@media only screen and (min-width: 500px) {
-  .links {
-    font-size: 1.5em;
+@media only screen and (min-width: 700px) {
+  .links i {
+    font-size: 2.2em;
   }
-}
 
-@media only screen and (min-width: 1000px) {
   h1 {
-    font-size: 2.8em;
+    font-size: 2.2rem;
   }
 
   .display {
-    min-height: 60px;
-    padding: 1em;
+    min-height: 3.1rem;
+    font-size: 1.45rem;
+    padding: 0.48em;
   }
+
+  // change order and layout of buttons
   .buttons {
-    column-gap: 20px;
+    column-gap: 1.25rem;
 
     button {
       flex: 1;
-      min-height: 60px;
-      margin-bottom: 0px;
+      min-height: 3.1rem;
+      font-size: 1.45rem;
     }
 
     .plus,
@@ -33,5 +34,9 @@
     .reset {
       order: 2;
     }
+  }
+
+  .message {
+    font-size: 1.25rem;
   }
 }

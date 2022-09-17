@@ -4,6 +4,7 @@ const counter = document.querySelector(".counter");
 const display = document.querySelector(".display");
 const buttons = document.querySelector(".buttons");
 
+// error message when pressing buttons set to null
 let errorMsg;
 
 // starting value of counter
@@ -51,7 +52,7 @@ function updateCounter(event) {
   display.innerHTML = num;
   setTimeout(() => (display.style.color = ""), "250");
 
-  // FUNCTIONS //
+  // INNER FUNCTIONS //
 
   // Display error Message
   function errorMsgDisplay(msg) {

@@ -1,0 +1,22 @@
+// Links on top of the page (Github and Portfolio).
+
+// positioned absolute to <body>.
+.links {
+  position: absolute;
+  top: 2.5vh;
+  left: 10vw;
+
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+
+  height: 5vh;
+  width: 80vw;
+
+  i {
+    font-size: 1.75rem;
+    &:hover {
+      color: white;
+    }
+  }
+}

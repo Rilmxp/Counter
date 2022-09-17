@@ -18,20 +18,30 @@
   box-sizing: border-box;
 }
 
+// Color variables
+$color-purple: #551a8b;
+$color-skyblue: #74ebd5;
+
 body {
   font-family: "Archivo Narrow", sans-serif;
-  color: rgb(85, 25, 139);
-  background: linear-gradient(to left, #74ebd5, #acb6e5);
+  color: $color-purple;
+  background: linear-gradient(to left, $color-skyblue, #acb6e5);
   overflow: hidden;
 }
 
-@mixin box-style {
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+// Useful mixins and animations
+@mixin shadow-style {
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 12px 30px,
     rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
     rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
-  border-radius: 25px;
 }
 
+@mixin border-style {
+  border: 2px $color-purple solid;
+  border-radius: 33px;
+}
+
+// Animation for error message when pressing buttons (.message)
 @keyframes msg-fade-in {
   50% {
     opacity: 1;
