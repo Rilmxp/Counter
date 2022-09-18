@@ -1,6 +1,7 @@
 # Counter
 
 A counter implemented with plain Javascript
+Link to website https://rilmxp-counter.netlify.app/
 
 ## Description
 
