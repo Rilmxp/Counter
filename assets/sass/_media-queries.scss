@@ -1,6 +1,10 @@
-@media only screen and (min-width: 700px) {
+@media only screen and (min-width: 700px) and (min-height: 451px) {
   .links i {
     font-size: 2.2em;
+  }
+
+  .counter {
+    row-gap: 15vh;
   }
 
   h1 {
@@ -23,9 +27,8 @@
       font-size: 1.45rem;
     }
 
-    .plus,
-    .minus {
-      margin-bottom: 0;
+    .reset {
+      margin-top: 0;
     }
 
     .minus {
@@ -38,5 +41,56 @@
 
   .message {
     font-size: 1.25rem;
+  }
+}
+
+// Specific for devices with very low height so all elements can fit on the screen.
+@media only screen and (max-height: 450px) {
+  .links {
+    flex-direction: column;
+    top: 5vh;
+    left: 2.5vw;
+    height: 90vh;
+    width: 5vw;
+  }
+
+  .counter {
+    height: 90vh;
+    row-gap: 20vh;
+  }
+
+  // change order and layout of buttons
+  .buttons {
+    column-gap: 1.25rem;
+
+    button {
+      flex: 1;
+    }
+
+    .reset {
+      margin-top: 0;
+    }
+
+    .minus {
+      order: 3;
+    }
+    .reset {
+      order: 2;
+    }
+  }
+}
+
+// set max width of elements so they don't stretch indefinitely
+@media only screen and (min-width: 1400px) {
+  .counter {
+    max-width: 1400px;
+  }
+
+  .links {
+    max-width: 1400px;
+
+    // centers the element as position is absolute
+    left: 50%;
+    transform: translateX(-50%);
   }
 }

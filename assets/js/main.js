@@ -4,7 +4,7 @@ const counter = document.querySelector(".counter");
 const display = document.querySelector(".display");
 const buttons = document.querySelector(".buttons");
 
-// error message when pressing buttons set to null
+// pop-up error message at pressing buttons set to null
 let errorMsg;
 
 // starting value of counter
@@ -14,13 +14,14 @@ counter.addEventListener("click", function (event) {
   updateCounter(event);
 });
 
+// counter operations
 function updateCounter(event) {
   if (!event.target.closest("BUTTON")) return;
   if (errorMsg) errorMsg.remove();
 
   switch (event.target.closest("BUTTON").dataset.action) {
     case "+":
-      // check new num size > than display's to stop counter
+      // check new num size > display size to display error.
       if (numBiggerThanDisplaySize()) {
         return errorMsgDisplay("Maximum value reached");
       }
@@ -54,21 +55,32 @@ function updateCounter(event) {
 
   // INNER FUNCTIONS //
 
-  // Display error Message
+  //// Display error Message ////
   function errorMsgDisplay(msg) {
+    // get central Y coords of space between display and buttons to position msg.
+    let msgSpaceCenter =
+      (buttons.getBoundingClientRect().top -
+        display.getBoundingClientRect().bottom) /
+        2 +
+      display.getBoundingClientRect().bottom;
+
+    // create and position message to display
     errorMsg = document.createElement("div");
-    buttons.insertAdjacentElement("afterbegin", errorMsg);
+    document
+      .querySelector("body")
+      .insertAdjacentElement("afterbegin", errorMsg);
     errorMsg.innerHTML = msg;
+    errorMsg.style.top = msgSpaceCenter + "px";
     errorMsg.classList.add("message");
   }
 
-  // Measure num length in pixs to stop counter if > display size
+  //// Measure num length in pixs to stop counter if > display size ////
   function numBiggerThanDisplaySize() {
-    // create a span to measure size of new num
+    // creates a temporary span to measure size of new num
     let ruler = document.createElement("span");
     document.querySelector("body").insertAdjacentElement("afterbegin", ruler);
 
-    // get some display's handy computed properties
+    // gets some display's handy computed properties
     let displayCssProp = window.getComputedStyle(display);
 
     //display's padding
@@ -76,7 +88,7 @@ function updateCounter(event) {
       parseInt(displayCssProp.getPropertyValue("padding-left")) +
       parseInt(displayCssProp.getPropertyValue("padding-right"));
 
-    // set same font css prop to match display content
+    // sets same font props to match display content
     ruler.style.fontWeight = displayCssProp.getPropertyValue("font-weight");
     ruler.style.fontSize = displayCssProp.getPropertyValue("font-size");
 
