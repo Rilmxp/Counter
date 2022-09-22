@@ -40,7 +40,7 @@ For each of these instances a message will pop up giving feedback to the user.
     - Github and Briefcase (&lt;a&gt; to Portfolio).
   
  ## Responsiveness:
-  - ### max-height: 450px: set specifically for devices with a very low viewport height so all elements fit comfortably on the page.
+  - max-height: 450px: set specifically for devices with a very low viewport height so all elements fit comfortably on the page.
   - min-widht: 700px and min-height: 451px. It updates Buttons' layout and their order on the page as well as it upscales elements and font sizes.
   - min-width: 1400px. Sets elements to a fixed width so they do not stretch indefinitely.
 
