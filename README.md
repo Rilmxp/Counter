@@ -40,7 +40,7 @@ For each of these instances a message will pop up giving feedback to the user.
     - CSS msg-fade-in animation for feedback messages made with @keyframes
   
   - Font-Awesome:
-    - Github and Briefcase (&lt;a&gt; to Portfolio).
+    - Github and Briefcase icons (&lt;a&gt; to Portfolio).
   
  ## Responsiveness:
   - max-height: 450px: set specifically for devices with a very low viewport height so all elements fit comfortably on the page.
