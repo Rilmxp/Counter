@@ -37,7 +37,7 @@ For each of these instances a message will pop up giving feedback to the user.
     - CSS msg-fade-in animation for feedback messages made with @keyframes
   
   - Font-Awesome:
-    - Github and Briefcase (<a> to Portfolio).
+    - Github and Briefcase (&lt;a&gt; to Portfolio).
   
  ## Responsiveness:
   - Only one breakpoint at 700px. It updates Buttons' layout and their order on the page as well as it upscales elements and font sizes.
