@@ -11,7 +11,7 @@ The website consists of a single page with a central counter. The counter displa
 ## Behaviour
 
 - Minimum value is 0.
-- Maximum value is any number that fits on the display without overflowing it (see "javascript" notes on the next section). 
+- Maximum value is any number that fits on the display box without overflowing it (see "javascript" notes on the next section). 
 - You cannot reset counter when at 0.
 
 For each of these instances a message will pop up giving feedback to the user.
