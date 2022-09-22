@@ -33,7 +33,7 @@ For each of these instances a message will pop up giving feedback to the user.
       
       - "click" event on buttons is handled with Event Delegation. 
   
-    - Additional notes on the above functions can be found directly on the code itself on main.js.
+      - Additional notes on the above functions can be found directly on the code itself on main.js.
   
   - CSS/SASS:
     - SASS partials are organized both by group of elements (_links, _counter-elements) or scope (_config, _media queries).
