@@ -45,9 +45,6 @@
   button {
     @include border-style;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
     width: 45%;
     font-size: 1.03rem;
     padding: 0.33rem;

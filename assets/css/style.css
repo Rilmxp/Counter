@@ -96,9 +96,6 @@ body {
 .buttons button {
   border: 2px #551a8b solid;
   border-radius: 33px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   width: 45%;
   font-size: 1.03rem;
   padding: 0.33rem;
