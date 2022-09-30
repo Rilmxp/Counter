@@ -26,8 +26,8 @@ For each of these instances a message will pop up giving feedback to the user.
 
   - Two javascript files:
 
-    - 1. counter_creation.js for creating the counter section of the DOM.
-    - 2. counter_operations to make the counter works.
+    - counter_creation.js for creating the counter section of the DOM.
+    - counter_operations to make the counter works.
 
   - DOM Manipulation: addition/removal of classes, creation of pop-up messages and other elements both for building the DOM and to assist measurement of content in pixels ("ruler").
 
