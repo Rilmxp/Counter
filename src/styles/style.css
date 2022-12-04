@@ -1,12 +1,12 @@
 @font-face {
   font-family: "Archivo Narrow";
-  src: url("../fonts/ArchivoNarrow-Regular.otf") format("otf");
+  src: url("../../assets/fonts/ArchivoNarrow-Regular.otf") format("otf");
   font-style: normal;
   font-weight: 400;
 }
 @font-face {
   font-family: "Archivo Narrow";
-  src: url("../fonts/ArchivoNarrow-Bold.otf") format("otf");
+  src: url("../../assets/fonts/ArchivoNarrow-Bold.otf") format("otf");
   font-style: normal;
   font-weight: 700;
 }
