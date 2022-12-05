@@ -20,7 +20,6 @@ body {
   font-family: "Archivo Narrow", sans-serif;
   color: #551a8b;
   background: linear-gradient(to left, #74ebd5, #acb6e5);
-  overflow: hidden;
 }
 
 @keyframes msg-fade-in {
